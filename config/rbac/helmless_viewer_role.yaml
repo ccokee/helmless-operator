@@ -1,0 +1,27 @@
+# permissions for end users to view helmlesses.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: helmless-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: helmlessoperator
+    app.kubernetes.io/part-of: helmlessoperator
+    app.kubernetes.io/managed-by: kustomize
+  name: helmless-viewer-role
+rules:
+- apiGroups:
+  - helmless.redrvum.cloud
+  resources:
+  - helmlesses
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - helmless.redrvum.cloud
+  resources:
+  - helmlesses/status
+  verbs:
+  - get

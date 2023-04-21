@@ -1,0 +1,4 @@
+## Append samples you want in your CSV to this file as resources ##
+resources:
+- helmless_v1alpha1_helmless.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

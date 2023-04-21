@@ -1,0 +1,12 @@
+apiVersion: helmless.redrvum.cloud/v1alpha1
+kind: HelmLess
+metadata:
+  labels:
+    app.kubernetes.io/name: helmless
+    app.kubernetes.io/instance: helmless-sample
+    app.kubernetes.io/part-of: helmlessoperator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: helmlessoperator
+  name: helmless-sample
+spec:
+  # TODO(user): Add fields here
