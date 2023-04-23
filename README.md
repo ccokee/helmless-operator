@@ -1,6 +1,6 @@
 # Helmless Operator
 
-The Helmless Operator is a Kubernetes operator designed to deploy any Helm chart using values from a GitHub Gist. It allows users to create a custom resource that specifies the chart repository, chart name, chart version, namespace, and the public Gist containing the values file.
+The Helmless Operator is a Kubernetes operator designed to deploy any Helm chart using values from any .yaml based file URL. It allows users to create a custom resource that specifies the chart repository, chart name, chart version, namespace, and the public Gist containing the values file.
 
 ## Prerequisites
 
@@ -50,10 +50,10 @@ spec:
   chartVersion: "<your-chart-version>"
   chartReleaseName: "<your-release-name>"
   namespace: default
-  publicGist: https://gist.github.com/username/gist_id
+  valuesUrl: <.yaml-url-with-values>
 ```
 
-Replace `<your-chart-repo>`, `<your-chart-name>`, `<your-chart-version>` with the corresponding details of the Helm chart you want to deploy.
+Replace `<your-chart-repo>`, `<your-chart-name>`, `<your-chart-version>`, `<your-release-name>` and `<.yaml-url-with-values>` with the corresponding details of the Helm chart you want to deploy.
 
 2. Apply the HelmLess custom resource:
 
