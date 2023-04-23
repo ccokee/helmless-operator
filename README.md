@@ -20,7 +20,7 @@ cd helmless-operator
 2. Deploy the Helmless Operator CRD:
 
 ```sh
-kubectl apply -f config/crd/bases/cache.redrvm.cloud_helmlesses.yaml
+kubectl apply -f config/crd/bases/helmless.redrvum.cloud_helmlesses.yaml
 ```
 
 3. Install the operator's deployment and related resources:
@@ -98,7 +98,7 @@ kubectl delete -f helmless-operator.yaml
 3. Delete the Helmless CRD:
 
 ```sh
-kubectl delete -f config/crd/bases/cache.redrvm.cloud_helmlesses.yaml
+kubectl delete -f config/crd/bases/helmless.redrvum.cloud_helmlesses.yaml
 ```
 
 This will clean up all resources related to the Helmless Operator.
