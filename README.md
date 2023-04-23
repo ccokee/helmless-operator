@@ -1,4 +1,4 @@
-# Helmless Operator
+# Helmless Kubernetes operator
 
 The Helmless Operator is a Kubernetes operator designed to deploy any Helm chart using values from any .yaml based file URL. It allows users to create a custom resource that specifies the chart repository, chart name, chart version, namespace, and the URL containing the values file.
 
