@@ -6,9 +6,13 @@ metadata:
   name: manager-role
 rules:
 - apiGroups:
-  - helmless.redrvm.cloud
+  - ""
   resources:
-  - helmless
+  - configmaps
+  - pods
+  - secrets
+  - serviceaccounts
+  - services
   verbs:
   - create
   - delete
@@ -20,13 +24,25 @@ rules:
 - apiGroups:
   - helmless.redrvm.cloud
   resources:
-  - helmless/finalizers
+  - helmlesss
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - helmless.redrvm.cloud
+  resources:
+  - helmlesss/finalizers
   verbs:
   - update
 - apiGroups:
   - helmless.redrvm.cloud
   resources:
-  - helmless/status
+  - helmlesss/status
   verbs:
   - get
   - patch

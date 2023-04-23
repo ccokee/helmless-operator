@@ -1,0 +1,16 @@
+apiVersion: helmless.redrvm.cloud/v1alpha1
+kind: HelmLess
+metadata:
+  labels:
+    app.kubernetes.io/name: helmless
+    app.kubernetes.io/instance: helmless-0
+    app.kubernetes.io/part-of: helmless
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: helmless-operator
+  name: helmless-deployer
+spec:
+  chartRepo: github.com/ccokee/slck-chart
+  chartName: slck-chart
+  chartVersion: "1"
+  namespace: default
+  valuesUrl: https://gist.github.com/devtest/1089951

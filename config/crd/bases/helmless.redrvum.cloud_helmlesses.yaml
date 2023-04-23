@@ -37,13 +37,15 @@ spec:
             properties:
               chartName:
                 type: string
+              chartReleaseName:
+                type: string
               chartRepo:
                 type: string
               chartVersion:
                 type: string
               namespace:
                 type: string
-              publicGist:
+              valuesUrl:
                 type: string
             type: object
           status:

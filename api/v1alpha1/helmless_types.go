@@ -6,20 +6,33 @@ import (
 
 // HelmLessSpec defines the desired state of HelmLess
 type HelmLessSpec struct {
-	ChartRepo    string `json:"chartRepo,omitempty"`
-	ChartName    string `json:"chartName,omitempty"`
+	// +operator-sdk:csv:customresourcedefinitions:type=spec
+	ChartRepo string `json:"chartRepo,omitempty"`
+	// +operator-sdk:csv:customresourcedefinitions:type=spec
+	ChartName string `json:"chartName,omitempty"`
+	// +operator-sdk:csv:customresourcedefinitions:type=spec
+	ChartReleaseName string `json:"chartReleaseName,omitempty"`
+	// +operator-sdk:csv:customresourcedefinitions:type=spec
 	ChartVersion string `json:"chartVersion,omitempty"`
-	Namespace    string `json:"namespace,omitempty"`
-	PublicGist   string `json:"publicGist,omitempty"`
+	// +operator-sdk:csv:customresourcedefinitions:type=spec
+	Namespace string `json:"namespace,omitempty"`
+	// +operator-sdk:csv:customresourcedefinitions:type=spec
+	ValuesUrl string `json:"valuesUrl,omitempty"`
 }
 
 // HelmLessStatus defines the observed state of HelmLess
 type HelmLessStatus struct {
-	Deployed       bool                 `json:"deployed,omitempty"`
-	Message        string               `json:"message,omitempty"`
-	ReleaseName    string               `json:"releaseName,omitempty"`
-	Namespace      string               `json:"namespace,omitempty"`
-	ChartInfo      HelmChartInfo        `json:"chartInfo,omitempty"`
+	// +operator-sdk:csv:customresourcedefinitions:type=status
+	Deployed bool `json:"deployed,omitempty"`
+	// +operator-sdk:csv:customresourcedefinitions:type=status
+	Message string `json:"message,omitempty"`
+	// +operator-sdk:csv:customresourcedefinitions:type=status
+	ReleaseName string `json:"releaseName,omitempty"`
+	// +operator-sdk:csv:customresourcedefinitions:type=status
+	Namespace string `json:"namespace,omitempty"`
+	// +operator-sdk:csv:customresourcedefinitions:type=status
+	ChartInfo HelmChartInfo `json:"chartInfo,omitempty"`
+	// +operator-sdk:csv:customresourcedefinitions:type=status
 	DeploymentInfo []HelmDeploymentInfo `json:"deploymentInfo,omitempty"`
 }
 
