@@ -48,6 +48,7 @@ spec:
   chartRepo: <your-chart-repo>
   chartName: <your-chart-name>
   chartVersion: "<your-chart-version>"
+  chartReleaseName: "<your-release-name>"
   namespace: default
   publicGist: https://gist.github.com/username/gist_id
 ```
